@@ -1,0 +1,304 @@
+/* Contenedor del chat */
+.contenedor-chat {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+/* ----- Sidebar ----- */
+.barra-lateral {
+  background-color: #ffffff;
+  border-right: 1px solid #ddd;
+  padding: 30px 90px 30px 30px;
+}
+
+/* Tabs */
+.pestanas {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.pestanas a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pestana {
+  flex: 1;
+  padding: 15px 105px;
+  background-color: #e0f2f1;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.pestana.activa {
+  background-color: #0288d1;
+  color: #ffffff;
+}
+
+.pestana:hover {
+  background-color: #0288d1;
+  color: white;
+}
+
+.contenedor-listas {
+  display: flex; /* Usa Flexbox para alinear los elementos en una fila */
+  gap: 20px; /* Espacio entre los dos divs */
+  justify-content: flex-start; /* Alinea los elementos al inicio */
+  align-items: flex-start; /* Alinea los elementos verticalmente al inicio */
+}
+
+/* Lista de chats */
+.lista-productos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+.chat-productos {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 300px;
+  flex: 1; /* Ocupa el espacio disponible */
+}
+
+.chat-productos.activo {
+  background-color: #b0bec5;
+}
+
+.chat-productos:hover {
+  background-color: #b0bec5;
+}
+
+.chat-productos h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.chat-productos p {
+  font-size: 12px;
+  color: #555;
+}
+
+
+/* Lista de personas */
+.lista-personas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1; 
+}
+
+.chat-personas {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 300px;
+
+}
+
+.chat-personas.activo {
+  background-color: #b0bec5;
+}
+
+.chat-personas:hover {
+  background-color: #b0bec5;
+}
+
+.chat-personas h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.chat-personas p {
+  font-size: 12px;
+  color: #555;
+}
+
+/* ----- Panel de mensajes ----- */
+.panel-mensajes {
+  flex: 1;
+  padding: 20px;
+}
+
+.encabezado-mensajes {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+
+.encabezado-mensajes h2 {
+  font-size: 18px;
+}
+
+.encabezado-mensajes .username {
+  font-size: 14px;
+  color: #666;
+}
+
+.mensajes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.mensaje {
+  background-color: white;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+.mensaje strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.entrada-mensaje {
+  display: flex;
+  gap: 10px;
+  margin-top: 450px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.entrada-mensaje input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  font-size: 14px;
+  outline: none;
+}
+
+.entrada-mensaje button {
+  background-color: #0288d1;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.entrada-mensaje button:hover {
+  background-color: #0277bd;
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  .contenedor-chat {
+    flex-direction: column; /* Apila la barra lateral y el panel de mensajes verticalmente */
+  }
+
+  .barra-lateral {
+    width: 100%; /* La barra lateral ocupará todo el ancho */
+    padding: 20px; /* Ajusta el espaciado interno */
+    border-right: none; /* Elimina el borde derecho */
+    border-bottom: 1px solid #ddd; /* Agrega un borde inferior */
+  }
+
+  .pestana {
+    padding: 10px 20px; /* Reduce el tamaño de los botones */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+  }
+
+  .lista-chats {
+    gap: 5px; /* Reduce el espacio entre los chats */
+  }
+
+  .chat-item {
+    width: 100%; /* Los contenedores de los chats ocuparán todo el ancho */
+    padding: 10px; /* Reduce el relleno */
+  }
+
+  .panel-mensajes {
+    padding: 15px; /* Ajusta el espaciado interno */
+  }
+
+  .encabezado-mensajes h2 {
+    font-size: 16px; /* Reduce el tamaño del título */
+  }
+
+  .entrada-mensaje {
+    margin-top: 20px; /* Ajusta el margen superior */
+  }
+
+  .entrada-mensaje input {
+    font-size: 12px; /* Reduce el tamaño del texto */
+  }
+
+  .entrada-mensaje button {
+    font-size: 16px; /* Ajusta el tamaño del botón */
+  }
+
+  .contenedor-listas {
+    flex-direction: column; /* Apila los divs verticalmente */
+    gap: 10px; /* Reduce el espacio entre los divs */
+    justify-items: center;
+  }
+
+  .lista-productos,
+  .lista-personas {
+    width: 100%; /* Ambos divs ocuparán el 100% del ancho */
+  }
+  
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  .contenedor-listas {
+    flex-direction: column; /* Apila los divs verticalmente */
+    gap: 10px; /* Reduce el espacio entre los divs */
+    justify-items: center;
+  }
+  
+  .barra-lateral {
+    padding: 10px; /* Reduce el espaciado interno */
+  }
+
+  .pestana {
+    padding: 8px 15px; /* Reduce aún más el tamaño de los botones */
+    font-size: 12px; /* Ajusta el tamaño del texto */
+  }
+
+  .chat-item {
+    padding: 8px; /* Reduce el relleno */
+    font-size: 12px; /* Ajusta el tamaño del texto */
+  }
+
+  .panel-mensajes {
+    padding: 10px; /* Reduce el espaciado interno */
+  }
+
+  .encabezado-mensajes h2 {
+    font-size: 14px; /* Reduce el tamaño del título */
+  }
+
+  .entrada-mensaje input {
+    font-size: 12px; /* Ajusta el tamaño del texto */
+    padding: 8px; /* Reduce el relleno */
+  }
+
+  .entrada-mensaje button {
+    font-size: 14px; /* Ajusta el tamaño del botón */
+    padding: 0 15px; /* Reduce el relleno horizontal */
+  }
+}
