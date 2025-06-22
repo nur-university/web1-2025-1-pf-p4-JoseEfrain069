@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+  <link rel="stylesheet" href="chat_comprador/css/comprador.css">
+  <link rel="stylesheet" href="CSS/header.css">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+  <header class="encabezado">
+    <nav class="barra-navegacion"> 
+      <div class="navegacion-izquierda"> 
+        <div class="desplegable">
+          <button class="boton-desplegable">☰ Categorías</button>
+          <div class="contenido-desplegable">
+            <a href="../../publicaciones/html/publicaciones.html">Pelotas</a>
+            <a href="#">Poleras</a>
+            <a href="#">Shorts</a>
+            <a href="#">Calzado deportivo</a>
+            <a href="#">Accesorios</a>
+          </div>
+        </div>
+        <input type="text" class="caja-busqueda" placeholder="Buscar...">
+      </div>
+      <ul class="enlaces-navegacion">
+        <li><a href="../../index.html">Productos en Oferta</a></li>
+        <li><a href="../../index.html">Productos Populares</a></li>
+        <li><a href="../../index.html">Anuncios Destacados</a></li>
+        <li><a href="../../index.html">Preguntas Frecuentes</a></li>
+      </ul>
+      <a href="#" class="texto-guardados">Guardados</a>
+      <div class="usuario-registrado">
+        <div class="menu-usuario">
+          <div class="perfil">
+            <strong>Hi, Efrain</strong><br />
+            <span class="correo">Efrain@...</span>
+          </div>
+        <div class="contenido-usuario">
+          <a href="#">Ver perfil</a>
+          <a href="#">Guardados</a>
+          <a href="#">Crear Anuncio</a>
+          <a href="#">Publicaciones</a>
+          <a href="#">Chats</a>
+          <a href="#">Cerrar Sesión</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor-chat">
+    <aside class="barra-lateral">
+      <div class="pestanas">
+        <a href="#" class="pestana activa">Comprador</a>
+        <a href="chat_vendedor/html/vendedor.html" class="pestana">Vendedor</a>
+      </div>
+      <div class="lista-chats">
+        <div class="chat-item activo">
+          <h4>Jabulani 2010 Pateada por Forlan</h4>
+          <p>Adquiere una pieza única de la...</p>
+        </div>
+        <div class="chat-item">
+          <h4>Tachones antiguos del año de la pera</h4>
+          <p>Los primeros botines creados por...</p>
+        </div>
+      </div>
+    </aside>
+
+    <section class="panel-mensajes">
+      <div class="encabezado-mensajes">
+        <h2>Jabulani 2010 Pateada por Forlan</h2>
+        <span class="nombre-usuario">Efrain Justiniano @Ejusti</span>
+      </div>
+
+      <div class="mensajes">
+        <div class="mensaje">
+          <strong>Leandro Barba</strong>
+          <p>Hola, sigue disponible el producto?</p>
+        </div>
+        <div class="mensaje">
+          <strong>Efrain Justiniano</strong>
+          <p>Buenos días, claro!! sigue disponible</p>
+        </div>
+      </div>
+
+      <form class="entrada-mensaje">
+        <input type="text" placeholder="Enviar mensaje...">
+        <button type="submit">➤</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

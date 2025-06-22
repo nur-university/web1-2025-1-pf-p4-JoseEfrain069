@@ -1,0 +1,42 @@
+.producto p {
+  font-size: 1em;
+  color: #333;
+  margin: 0;
+}
+
+.preguntas-frecuentes {
+  background-color: #000;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.preguntas-frecuentes h2 {
+  margin-bottom: 30px;
+  font-size: 1.8em;
+}
+
+.preguntas-frecuentes ul {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.preguntas-frecuentes li {
+  border-top: 1px solid #333;
+  padding: 15px 0;
+}
+
+.preguntas-frecuentes a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+@media (max-width: 768px) {
+
+  .preguntas-frecuentes ul {
+    padding: 0 10px;
+  }
+}
